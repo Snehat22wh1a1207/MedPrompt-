@@ -50,7 +50,9 @@ Return ONLY valid JSON."""
         result = json.loads(response.choices[0].message.content)
         return result
     except Exception as e:
+        import logging
+        logging.getLogger(__name__).error("Medical document analysis failed: %s", e)
         return {
-            "overview": {"error": f"Analysis failed: {str(e)}"},
-            "summary": f"We encountered an issue analyzing your document. Please try again or consult a healthcare professional. Error: {str(e)}"
+            "overview": {"error": "Analysis failed. Please try again."},
+            "summary": "We encountered an issue analyzing your document. Please try again or consult a healthcare professional."
         }

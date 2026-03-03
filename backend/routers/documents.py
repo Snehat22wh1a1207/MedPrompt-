@@ -52,7 +52,9 @@ async def analyze_document(
         try:
             extracted_text = await extract_text_from_file(file_content, file_name)
         except Exception as e:
-            extracted_text = f"Could not extract text: {str(e)}"
+            import logging
+            logging.getLogger(__name__).error("OCR extraction failed: %s", e)
+            raise HTTPException(status_code=422, detail="Could not extract text from the uploaded file. Please ensure it is a valid PDF or image.")
     else:
         raise HTTPException(status_code=400, detail="No input provided")
     
