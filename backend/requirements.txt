@@ -1,0 +1,16 @@
+fastapi==0.115.0
+uvicorn==0.24.0
+motor==3.3.2
+pymongo==4.6.1
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.22
+pydantic==2.5.2
+pydantic-settings==2.1.0
+pytesseract==0.3.10
+Pillow==12.1.1
+pdfplumber==0.10.3
+litellm==1.61.15
+python-dotenv==1.0.0
+aiofiles==23.2.1
+pdf2image==1.16.3

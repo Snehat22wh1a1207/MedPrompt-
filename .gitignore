@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+frontend/.next/
+frontend/out/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+backend/.env
+backend/uploads/*
+!backend/uploads/.gitkeep
+*.egg-info/
+dist/
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+frontend/.env.local
+
+# Logs
+*.log
+npm-debug.log*
